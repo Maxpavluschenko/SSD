@@ -1,0 +1,447 @@
+@font-face  
+      font-family:  Roboto-Regular
+      src: url('../fonts/Roboto-Regular.ttf') format('truetype')
+      font-weight:  normal
+      font-style:  normal
+@font-face  
+      font-family:  Roboto-Thin
+      src: url('../fonts/Roboto-Thin.ttf') format('truetype')
+      font-weight:  normal
+      font-style:  normal
+
+$bg-body: #4a607d
+$bg-hover: #56ccc8
+$header-social: #b2b9bd
+
+%menu-icon
+	background: 
+		repeat: no-repeat 
+		size: 25px
+		position: 10% 45%
+	display: inline-block
+	vertical-align: bottom
+	padding-left: 65px
+	width: 100%	
+%box-social-item
+	display: inline-block
+	background-repeat: no-repeat
+	background-position: left center		
+
+body 
+	margin: 0
+	padding: 0
+	background-color: $bg-body
+	font-family: Roboto-Regular
+	box-sizing: border-box
+  	overflow: hidden
+.wrapper
+	display: flex
+.container
+	padding: 0
+	.navbar
+		padding: 0
+		margin-bottom: 14px
+		justify-content: flex-start
+		.navbar-logo
+			background-color: $bg-hover 
+			margin-right: 22px
+			img 
+				padding: 22px 19px 22px 19px
+		.nav
+			.nav-link
+				padding: 19px 22px 18px 22px
+				font-size: 16px
+				color: #475055
+				&:hover
+					color: $bg-hover
+		.finder
+			form 
+				display: none
+				float: left
+				width: 180px
+				input
+					border-radius: 3px
+					width: 100%
+					height: 25px
+					outline: none
+			.button
+				background: 
+					image: url('../img/Search-icon.png')
+					repeat: no-repeat
+					position: center
+					size: inherit
+				width: 27px
+				height: 25px
+				cursor: pointer
+				float: right
+				margin-right: 20px
+	.navbar-social
+		border:
+			left: 1px solid $header-social
+			right: 1px solid $header-social
+		.first-social 
+			margin-left: 10px
+		.last-social 
+			margin-right: 10px
+		.nav-link
+			padding: 18px 10px 19px 10px
+		a:hover 
+			transform: translateY(-2px)
+	.navbar-log
+		.nav-link
+			padding: 18px 22px
+			&:hover
+				transform: scale(1.2)
+	.block-menu
+		display: flex
+		padding-left: 0
+		font-size: 16px
+		margin-right: 15px
+	
+	.side-menu
+		width: 225px
+		padding-left: 0
+		ul 
+			width: 100%
+			padding: 0
+			overflow: hidden
+			margin-bottom: 0
+			li 
+				background: #fff
+				border-bottom: 1px solid $header-social
+				a
+					padding: 20px 30px 
+					text-decoration: none
+					color: #475055
+					font-size: 16px
+					&:hover
+						background: $bg-hover
+							repeat: no-repeat
+							position: 10% 47%
+						color: #fff	
+				.menu-icon 
+					@extend %menu-icon
+				.home
+					background-image: url('../img/Home-icon.png')
+					&:hover
+						background-image: url('../img/Home-icon-hover.png')
+				.store
+					background-image: url('../img/Shop-icon.png')
+					&:hover
+						background-image: url('../img/Shop-icon-hover.png')
+				.blog
+					background-image: url('../img/Note-icon.png')
+					&:hover
+						background-image: url('../img/Note-icon-hover.png')
+				.community
+					background-image: url('../img/Users-icon.png')
+					&:hover
+						background-image: url('../img/Users-icon-hover.png')
+				.contests
+					background-image: url('../img/Trophy-icon.png')
+					&:hover
+						background-image: url('../img/Trophy-icon-hover.png')
+				.about
+					background-image: url('../img/Info-icon.png')
+					&:hover
+						background-image: url('../img/Info-icon-hover.png')
+				.contact
+					background-image: url('../img/Email-Icon.png')
+					&:hover
+						background-image: url('../img/Email-Icon-hover.png')
+					&:last-child 
+						border-bottom: none
+	.side-menu-cont
+		widows: 100%
+		background: #c2c2c2
+		border-bottom: none
+		font-size: 13px
+		padding-top: 17px
+		padding-bottom: 11px
+		& > a
+			color: #ffffff
+			text-decoration: none
+			padding: 13px 30px 15px 25px
+			padding-left: 65px
+			@extend %menu-icon
+			background-size: 22px
+		.phone
+			background-image: url('../img/Phone-icon.png')
+
+		.adrs
+			background-image: url('../img/Pointer-icon.png')
+		.mail
+			background-image: url('../img/Email-Icon-hover.png')
+	.right-menu
+		width: 240px
+		> ul
+			list-style-type: none 
+			padding: 0
+			margin: 0
+			> li
+				padding: 20px 20px 13px 34px
+				background-color: #152840
+				border-bottom: 1px solid #445e78
+				&:last-child
+					border-bottom: none
+				&:hover
+					background-color: #263a54
+				> a 
+					color: #56ccc8
+					display: block
+					text-decoration: none
+			> li.has-submenu
+				> a
+					background: 
+						image: url('../img/arrow.png')
+						repeat: no-repeat
+						position: 99% 5%
+					padding-bottom: 15px
+			> li 
+				ul 
+					list-style-type: none 
+					padding: 0
+					margin: 0
+				li 
+					padding-bottom: 5px
+					&:last-child
+						padding-bottom: 13px
+					a 
+						color: #ffffff
+						font-size: 14px
+.social-content
+	padding-left: 0
+	padding-right: 0
+	transition: all .5s ease
+	.top-social
+		display: flex
+	.box-social
+		width: 100%
+		max-width: 470px
+		display: flex
+		flex-direction: column
+		background-color: #ffffff
+		padding: 30px 0 24px 30px
+		margin-bottom: 15px
+		margin-right: 20px
+		transition: all .5s ease
+		.box-social-item
+			padding: 14px 0 14px 50px
+			color: #475055
+			text-decoration: none
+			font-size: 16px
+		.item-1
+			@extend %box-social-item
+			background-image: url('../img/facebook-logo.png')
+			&:hover
+				background-image: url('../img/facebook-logo-hover.png')
+				color: #4d6baa
+		.item-2
+			@extend %box-social-item
+			background-image: url('../img/twitter-logo.png')
+			&:hover
+				background-image: url('../img/twitter-logo-hover.png')
+				color: #4fc6f8
+		.item-3
+			@extend %box-social-item
+			background-image: url('../img/google-plus-logo.png')
+			&:hover
+				background-image: url('../img/google-plus-logo-hover.png')
+				color: #cf4e0d
+		.item-4
+			@extend %box-social-item
+			background-image: url('../img/rss.png')
+			&:hover
+				background-image: url('../img/rss-hover.png')
+				color: #ffa400
+		.item-5
+			@extend %box-social-item
+			background-image: url('../img/pinterest-logo.png')
+			&:hover
+				background-image: url('../img/pinterest-logo-hover.png')
+				color: #e02b2b
+.following-icon
+	display: flex
+	flex-direction: column
+	width: 100%
+	color: #ffffff
+.facebook-box,
+.twitter-box
+	padding: 24px 16px 15px 28px
+	height: 150px
+	img 
+		display: block
+		margin-bottom: 50px
+	span 
+		margin-top: 5px
+	a 
+		color: #ffffff
+		text-decoration: none
+		padding: 0 40px 1px 0
+		float: right
+.facebook-box
+	background-color: #4d6baa
+	margin-bottom: 15px
+.follow
+	background: url('../img/Follow-icon.png')
+	background-repeat: no-repeat
+	background-position: 100% 50%
+.following
+	background: url('../img/un-follow-icon.png')
+	background-repeat: no-repeat
+	background-position: 100% 50%
+
+.twitter-box
+	background-color: #4fc6f8
+	
+.flex-container
+	display: flex
+	flex-wrap: wrap	
+	justify-content: space-between
+.sign-in,
+.join
+	background-color: #ffffff
+	padding: 24px 
+	text-align: center
+	width: 100%
+	max-width: 470px
+	margin-bottom: 15px
+	transition: all .5s ease
+	h1 
+		font-size: 24px
+		text-align: center
+		margin-bottom: 15px
+	p 
+		margin-bottom: 22px
+	.sign-social
+		a 
+			margin-right: 15px
+			&:hover
+				opacity: 0.7
+.join
+	padding-bottom: 27px
+h1 
+	margin-bottom: 19px
+p 
+	margin-bottom: 25px
+input
+	width: 287px
+	padding: 8px 0 8px 20px
+	font-size: 16px
+	outline: 0
+button
+	height: 43px
+.btn
+	vertical-align: inherit
+.carousel-item
+	img 
+		max-height: 450px
+	.d-block
+		filter: blur(2px)
+.carousel-caption
+	bottom: 10%
+	h5 
+		font-size: 24px
+		margin-bottom: 25px
+
+footer 
+	background-color: #181e43
+	text-align: center
+	padding: 10px
+	margin-top: 15px
+	a 
+		margin-right: 15px
+	p 
+		margin: 0
+		margin-top: 10px
+		color: #ffffff
+
+		/*---------- MODAL ---------*/
+
+.modal.show 
+	.modal-dialog
+		max-width: 400px
+		transform: translate(0,80px)
+.form-name
+	margin-bottom: 20px
+.form-textarea
+	margin-top: 20px
+
+.form__error 
+	color: red
+	text-align: left
+	font-size: 12px
+	display: block
+	margin-top: 3px
+	display: none
+
+input:valid:not(:placeholder-shown) 
+	border-color: green
+input:invalid:not(:placeholder-shown) 
+	border-color: red
+input:invalid:not(:placeholder-shown) + .form__error 
+	display: block
+
+						
+@media screen and (min-width: 1200px)
+	.container 
+		max-width: 960px
+@media screen and (max-width: 991px)
+	.nav
+		display: none
+	.wrapper
+		flex-direction: column
+	.block-menu
+		margin-bottom: 15px
+	.social-content
+		max-width: 100%
+@media screen and (max-width: 500px)
+	.container
+		.side-menu
+			width: 180px
+			ul 
+				li 
+					a 
+						font-size: 13px
+		.side-menu-cont
+			font-size: 11px
+		.right-menu > ul > li
+			padding: 15px 20px 13px 15px
+		.social-content
+			padding-right: 5px
+			.box-social
+				padding: 30px 0 24px 15px
+				.box-social-item
+					font-size: 14px
+			.following-icon
+				font-size: 14px
+				a 
+					background-size: 19px
+				.facebook-box,
+				.twitter-box
+					height: 142px
+					padding: 24px 16px 15px 13px
+
+		.join
+			input
+				width: 200px
+				padding: 6px 0 4px 15px
+				font-size: 14px
+			button
+				height: 35px
+
+
+
+		
+
+					
+
+			
+				
+
+
+
+
+
+	
+
